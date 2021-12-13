@@ -33,12 +33,13 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
         
         updateView()
         updateSaveButtonState()
-        let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "dd/MM/yy"
-        let maxDateString = "13/06/2005"
-        let maxDate = dateformatter.date(from: maxDateString)
-        dobDatePicker.maximumDate = maxDate  // max date(can't choose date occurring after)
-        dobDatePicker.date = maxDate!
+//        let dateformatter = DateFormatter()
+//        dateformatter.dateFormat = "dd/MM/yy"
+//        let maxDateString = "13/06/2005"
+//        let maxDate = dateformatter.date(from: maxDateString)  // max date(can't choose date occurring after)
+        let maxDate = Date(timeInterval: -504576000, since: Date())
+        dobDatePicker.maximumDate = maxDate
+        dobDatePicker.date = maxDate
     }
     
     func updateView() {

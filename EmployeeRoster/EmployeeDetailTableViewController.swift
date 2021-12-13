@@ -37,8 +37,10 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
 //        dateformatter.dateFormat = "dd/MM/yy"
 //        let maxDateString = "13/06/2005"
 //        let maxDate = dateformatter.date(from: maxDateString)  // max date(can't choose date occurring after)
-        let maxDate = Date(timeInterval: -504576000, since: Date())
+        let maxDate = Date(timeInterval: -504576000, since: Date()) //2005
+        let minDate = Date(timeInterval: -2049840000, since: Date()) //1956
         dobDatePicker.maximumDate = maxDate
+        dobDatePicker.minimumDate = minDate
         dobDatePicker.date = maxDate
     }
     

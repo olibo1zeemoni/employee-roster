@@ -50,7 +50,7 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
     }
     
     private func updateSaveButtonState() {
-        let shouldEnableSaveButton = nameTextField.text?.isEmpty == false && employeeTypeLabel.text?.contains("Please") == false 
+        let shouldEnableSaveButton = nameTextField.text?.isEmpty == false && employeeTypeLabel.text?.contains("Please") == false && dobLabel.text?.contains("Please") == false 
         saveBarButtonItem.isEnabled = shouldEnableSaveButton
     }
     
@@ -124,7 +124,6 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
         
         return EmployeeTypeController
     }
-    
     
     
     
